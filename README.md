@@ -36,4 +36,4 @@ conda install -r requirements.txt
 
 
 
-
+https://developers.google.com/machine-learning/crash-course/prereqs-and-prework?hl=en
