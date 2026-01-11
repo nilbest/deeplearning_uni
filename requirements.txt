@@ -1,0 +1,7 @@
+nbstripout
+ipykernel
+pandas
+numpy
+matplotlib
+seaborn
+tensorflow
