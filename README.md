@@ -15,10 +15,6 @@ python3.10 -m venv .venv
 
 sudo pacman -S pyenv
 pyenv install 3.12
-
-
-
-
 pyenv virtualenv 3.12 tfenv
 pyenv activate tfenv
 
