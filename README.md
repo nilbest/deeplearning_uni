@@ -1,35 +1,60 @@
-For adding nbstripout to all .ipynb files for excluding all outputs repowide!
+# Deep Learning Uni Project
+
+Dieses Repository enthält Übungen und Experimente aus dem Bereich **Deep Learning mit TensorFlow/Keras**.  
+Der Fokus liegt auf Modelltraining, Evaluation (Loss/Accuracy), Normalisierung sowie Reproduzierbarkeit der Ergebnisse.
+
+---
+
+## 📦 Voraussetzungen
+
+- **Python:** 3.9 – 3.12 (TensorFlow-Kompatibilität)
+- **Git**
+- **Conda / Miniforge (empfohlen)** https://github.com/conda-forge/miniforge
+
+
+
+---
+
+## 🧪 Jupyter Notebooks ohne Outputs (nbstripout)
+
+Um Notebook-Outputs repositoryweit zu entfernen (saubere Commits):
+
+```bash
 nbstripout --install --attributes .gitattributes
 git add .gitattributes
 git commit -m "Add nbstripout configuration"
 git push
+```
 
+## 🐍 Miniforge / Conda / Mamba – Basics
 
-tensorflow braucht python 3.9-3.12
-entweder über 
+### Environment erstellen
+Ein neues Conda-Environment mit einer bestimmten Python-Version:
 
-paru -S python310-bin
-
-python3.10 -m venv .venv
-
-
-sudo pacman -S pyenv
-pyenv install 3.12
-pyenv virtualenv 3.12 tfenv
-pyenv activate tfenv
-
-
-oder besser 
-paru -S miniforge
-echo "[ -f /opt/miniforge/etc/profile.d/conda.sh ] && source /opt/miniforge/etc/profile.d/conda.sh" >> ~/.zshrc
-source ~/.zshrc
-conda --version
-
+```bash
 conda create -n deeplearning-uni python=3.12
 conda activate deeplearning-uni
+```
+Mein Env nutzen:
+```bash
+conda env create -f deeplearning-uni-env.yaml
+conda activate deeplearning-uni
+```
+oder für schnelleres erstellen Mamba nutzen:
+```bash
+conda install mamba -n base -c conda-forge
+mamba env create -f deeplearning-uni-env.yaml
+```
+---
+## Weiterführende Grundlagen
 
-conda install -r requirements.txt
+### Introduction
+https://developers.google.com/machine-learning/intro-to-ml?hl=en
 
+### Googles Crash-Course:
+https://developers.google.com/machine-learning/crash-course/linear-regression?hl=en
 
-
-https://developers.google.com/machine-learning/crash-course/prereqs-and-prework?hl=en
+### Some Tensorflow Tutorials
+https://www.tensorflow.org/tutorials/keras/regression
+https://www.tensorflow.org/tutorials/keras/classification
+https://www.tensorflow.org/tutorials/images/cnn
